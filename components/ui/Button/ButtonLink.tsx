@@ -12,6 +12,8 @@ export interface ButtonLinkProps
     Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof ButtonSharedProps> {
   /** 이동 URL (필수) */
   href: string;
+  /** 비활성 상태 — href 제거, aria-disabled, tabIndex=-1 적용 (<a>에는 네이티브 disabled 없음) */
+  disabled?: boolean;
 }
 
 // ---------------------------------------------------------------------------

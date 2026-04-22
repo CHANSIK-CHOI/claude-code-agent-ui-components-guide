@@ -78,11 +78,11 @@ export const Default: Story = {
 export const Variants: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-      <Button variant="primary" label="Primary" />
-      <Button variant="secondary" label="Secondary" />
-      <Button variant="outline" label="Outline" />
-      <Button variant="ghost" label="Ghost" />
-      <Button variant="danger" label="Danger" />
+      <Button fitWidth variant="primary" label="Primary" />
+      <Button fitWidth variant="secondary" label="Secondary" />
+      <Button fitWidth variant="outline" label="Outline" />
+      <Button fitWidth variant="ghost" label="Ghost" />
+      <Button fitWidth variant="danger" label="Danger" />
     </div>
   ),
 };
@@ -94,9 +94,9 @@ export const Variants: Story = {
 export const Sizes: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-      <Button size="sm" label="Small" />
-      <Button size="md" label="Medium" />
-      <Button size="lg" label="Large" />
+      <Button fitWidth size="sm" label="Small" />
+      <Button fitWidth size="md" label="Medium" />
+      <Button fitWidth size="lg" label="Large" />
     </div>
   ),
 };
@@ -108,11 +108,11 @@ export const Sizes: Story = {
 export const States: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-      <Button label="Default" />
-      <Button label="Loading" loading />
-      <Button label="Disabled" disabled />
-      <Button label="Error" error />
-      <Button label="Loading + Disabled" loading disabled />
+      <Button fitWidth label="Default" />
+      <Button fitWidth label="Loading" loading />
+      <Button fitWidth label="Disabled" disabled />
+      <Button fitWidth label="Error" error />
+      <Button fitWidth label="Loading + Disabled" loading disabled />
     </div>
   ),
 };
@@ -124,10 +124,10 @@ export const States: Story = {
 export const WithIcons: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-      <Button label="Left Icon" leftIcon={<Plus size={16} />} />
-      <Button label="Right Icon" rightIcon={<ArrowRight size={16} />} />
-      <Button label="Both Icons" leftIcon={<Plus size={16} />} rightIcon={<ArrowRight size={16} />} />
-      <Button label="Loading" leftIcon={<Plus size={16} />} loading />
+      <Button fitWidth label="Left Icon" leftIcon={<Plus size={16} />} />
+      <Button fitWidth label="Right Icon" rightIcon={<ArrowRight size={16} />} />
+      <Button fitWidth label="Both Icons" leftIcon={<Plus size={16} />} rightIcon={<ArrowRight size={16} />} />
+      <Button fitWidth label="Loading" leftIcon={<Plus size={16} />} loading />
     </div>
   ),
 };
@@ -177,11 +177,11 @@ export const LinkDefault: Story = {
 export const LinkVariants: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-      <ButtonLink href="#" variant="primary" label="Primary" />
-      <ButtonLink href="#" variant="secondary" label="Secondary" />
-      <ButtonLink href="#" variant="outline" label="Outline" />
-      <ButtonLink href="#" variant="ghost" label="Ghost" />
-      <ButtonLink href="#" variant="danger" label="Danger" />
+      <ButtonLink fitWidth href="#" variant="primary" label="Primary" />
+      <ButtonLink fitWidth href="#" variant="secondary" label="Secondary" />
+      <ButtonLink fitWidth href="#" variant="outline" label="Outline" />
+      <ButtonLink fitWidth href="#" variant="ghost" label="Ghost" />
+      <ButtonLink fitWidth href="#" variant="danger" label="Danger" />
     </div>
   ),
 };
@@ -193,9 +193,9 @@ export const LinkVariants: Story = {
 export const LinkStates: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
-      <ButtonLink href="#" label="Default" />
-      <ButtonLink href="#" label="Loading" loading />
-      <ButtonLink href="#" label="Disabled" disabled />
+      <ButtonLink fitWidth href="#" label="Default" />
+      <ButtonLink fitWidth href="#" label="Loading" loading />
+      <ButtonLink fitWidth href="#" label="Disabled" disabled />
     </div>
   ),
 };
