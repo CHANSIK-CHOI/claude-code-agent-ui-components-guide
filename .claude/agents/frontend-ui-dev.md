@@ -78,10 +78,29 @@ components/ui/ComponentName/
 ```
 
 ### 4-3. Props 설계
-- 명시적 props만 직접 선언: `variant`, `size`, `disabled`, `error`, `loading`, `className`, `label`, `icon`
-- 나머지는 `...rest`로 연결된 HTML 태그에 위임
-- 타입은 연결 태그 기준 확장: `React.InputHTMLAttributes<HTMLInputElement>` 등
-- `interface` + `extends` 활용으로 확장 가능하게 설계
+- 명시적 props만 직접 선언: ...
+- 나머지는 `...rest`로 ...
+- 타입은 연결 태그 기준 확장 ...
+- `interface` + `extends` ...
+- **태그별 지원 속성 차이 반드시 확인 후 타입 설계**
+  - `<button>` → `ButtonHTMLAttributes` — `disabled` 네이티브 지원
+  - `<a>` → `AnchorHTMLAttributes` — `disabled` 없음, 직접 처리 필요
+  - `<input>` → `InputHTMLAttributes` — `disabled`, `readOnly` 지원
+  - Base → Wrapper 분리 구조에서 Base props와 각 Wrapper props 타입을 별도로 정의할 것
+
+  예시 (ButtonLink):
+```tsx
+  // ❌ 금지
+  interface ButtonLinkProps extends AnchorHTMLAttributes {
+    disabled?: boolean
+  }
+  // ✅ 올바른 패턴
+  interface ButtonLinkProps extends AnchorHTMLAttributes {
+    isDisabled?: boolean
+  }
+```
+
+---
 
 ### 4-4. Variant 구성 (CVA 필수)
 ```ts
@@ -114,6 +133,7 @@ const componentVariants = cva(
 - 렌더링 결과물이 다른 경우 (예: `<button>` vs `<a>`)
 - 핵심 동작 로직이 다른 경우 (예: 단일 선택 vs 다중 선택)
 - Props 타입이 달라져서 조건 분기가 3개 이상 생기는 경우
+- Base props와 각 Wrapper props 타입은 별도로 정의 — 태그별 지원 속성이 다르기 때문
 
 **분리 패턴**
 공통 로직이 있을 경우 Base → Wrapper 구조로 분리한다:
@@ -361,5 +381,5 @@ async function fetcher<T>(endpoint: string, options?: FetchOptions): Promise<T> 
 - API 엔드포인트 구조 및 인증 방식
 - 발견된 코드 품질 이슈 및 개선 패턴
 
-## 13. MEMORY.md
+## MEMORY.md
 Your MEMORY.md is currently empty. When you save new memories, they will appear here.
