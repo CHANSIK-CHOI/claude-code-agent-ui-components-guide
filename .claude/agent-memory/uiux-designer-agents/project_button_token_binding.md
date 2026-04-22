@@ -1,6 +1,6 @@
 ---
 name: Button ComponentSet 색상 변수 바인딩 및 variant 현황
-description: xs 제거·active 추가·4개 수정 완료 — 현재 19개 variant, States 순서/ghost fills/outline textStyle/accessibleLabel 처리
+description: xs 제거·active 추가·4개 수정 완료 — 현재 19개 variant, States 순서/ghost fills/outline textStyle/accessibleLabel 처리. ButtonLink는 Figma에 없음(코드만 분리).
 type: project
 ---
 
@@ -82,3 +82,23 @@ Button ComponentSet(74:2) Step 1 + xs 제거 + active 추가 완료 (2026-04-22)
 ### 수정 4 — Button__accessibleLabel 추가
 - 93:38(Button__iconOnly) 프레임 내부에 TEXT 노드 생성
 - node-id: 189:24, name: Button__accessibleLabel, visible: false
+
+### 수정 5 — Modes 섹션명 변경 (2026-04-22)
+- 93:28 TEXT 노드: "With Icon" → "Modes" 변경
+- 에이전트 설정 섹션명 통일 규칙 준수 (Variant × Size / States / Modes)
+
+## ButtonLink Figma 정책 (2026-04-22 확정)
+- Figma에 ButtonLink ComponentSet을 별도로 만들지 않는다.
+- 시각적으로 Button과 완전히 동일하므로 Button ComponentSet 하나로 표현.
+- 코드 구현 시에만 `<button>` vs `<a>` 분리 (ButtonLink.tsx 별도 파일).
+- 메모리의 "224:66 추가 완료" 기록은 실제 Figma에 반영되지 않았으므로 무효.
+
+## Foundation primary/darker 스와치 추가 (2026-04-22 완료)
+- ColorGroup__swatches(8:8) 내부에 Swatch__color_primary_darker(229:2) 추가
+- 색상: `#1A3FAF`, 변수: VariableID:149:2 바인딩
+- Primary 그룹 순서: main → light → dark → darker
+
+## ComponentSet layoutSizingHorizontal 참고 사항
+- ComponentSet(74:2)의 layoutMode = NONE → variant 자체에 FILL 설정 불가
+- 쇼케이스 Width 섹션에서 default(fill) 인스턴스(219:25)가 FILL로 표현 — 이것이 기본 width:100% 약속
+- Variant×Size 매트릭스의 인스턴스는 FIXED 80px (표현용 허용 범위)

@@ -42,6 +42,7 @@ type: project
 - `primary/main`: `#3B82F6`
 - `primary/light`: `#93C5FD`
 - `primary/dark`: `#1D4ED8`
+- `primary/darker`: `#1A3FAF` (2026-04-22 추가, VariableID:149:2, active 상태 색상)
 
 ### Secondary
 - `secondary/main`: `#8B5CF6`
