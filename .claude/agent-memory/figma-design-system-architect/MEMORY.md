@@ -1,0 +1,1 @@
+- [UI 컴포넌트 가이드 파일 정보](project_ui_component_guide.md) — fileKey, 페이지 구성, Variables/TextStyles 현황, Components 섹션 목록

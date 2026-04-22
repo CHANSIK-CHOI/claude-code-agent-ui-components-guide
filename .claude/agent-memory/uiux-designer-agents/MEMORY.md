@@ -1,0 +1,3 @@
+- [Figma Foundation 페이지 구조](project_figma_foundation.md) — fileKey, 섹션 목록, 디자인 패턴, 전체 색상/radius 토큰 현황
+- [컴포넌트 쇼케이스 레이아웃 규칙](feedback_showcase_layout.md) — States 라벨은 버튼 위에, 섹션명은 States/Modes/Variant×Size 단순명칭 통일
+- [Button 색상 변수 바인딩 현황](project_button_token_binding.md) — 12개 variant raw hex 제거, 변수ID/텍스트스타일ID 전체 매핑, ComponentSet 접근법

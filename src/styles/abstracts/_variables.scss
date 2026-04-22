@@ -1,0 +1,26 @@
+@use 'sass:map';
+
+$breakpoints: (
+  'sm':  640px,
+  'md':  768px,
+  'lg':  1024px,
+  'xl':  1280px,
+  '2xl': 1536px,
+);
+
+$z-layers: (
+  'base':     0,
+  'dropdown': 100,
+  'modal':    200,
+  'toast':    300,
+);
+
+$font-sizes: (
+  'h1': 4.8rem, 'h2': 4rem, 'h3': 3.2rem, 'h4': 2.8rem,
+  'h5': 2.4rem, 'h6': 2rem,
+  'body1': 1.8rem, 'body2': 1.6rem, 'body3': 1.5rem,
+  'body4': 1.4rem, 'body5': 1.3rem,
+  'caption1': 1.2rem, 'caption2': 1.1rem, 'caption3': 1rem,
+);
+
+$spacing-values: (4, 8, 12, 16, 20, 24, 32, 40, 48, 64);

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sort -k6,7)",
+      "Bash(xargs ls *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(list\\(d.get\\('dependencies',{}\\).keys\\(\\)\\)[:15]\\)\")",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/ajv/package.json'\\).version\\)\")"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+@use '../abstracts/mixins' as *;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Pretendard', sans-serif;
+  font-size: var(--font-size-body2);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: var(--color-gray-900);
+  background-color: var(--color-background);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+h1 { @include typography('h1', 'bold'); }
+h2 { @include typography('h2', 'bold'); }
+h3 { @include typography('h3', 'semibold'); }
+h4 { @include typography('h4', 'semibold'); }
+h5 { @include typography('h5', 'medium'); }
+h6 { @include typography('h6', 'medium'); }

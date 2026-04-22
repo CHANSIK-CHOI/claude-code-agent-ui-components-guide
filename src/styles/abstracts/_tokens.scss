@@ -1,0 +1,95 @@
+:root {
+  // Color – Primary
+  --color-primary:        #3B82F6;
+  --color-primary-light:  #93C5FD;
+  --color-primary-dark:   #1D4ED8;
+  --color-primary-darker: #1A3FAF;
+
+  // Color – Secondary
+  --color-secondary:       #8B5CF6;
+  --color-secondary-light: #C4B5FD;
+  --color-secondary-dark:  #6D28D9;
+
+  // Color – Gray
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+
+  // Color – Semantic
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error:   #EF4444;
+  --color-info:    #3B82F6;
+
+  // Color – Surface
+  --color-background: #FFFFFF;
+  --color-surface:    #F9FAFB;
+  --color-border:     #E5E7EB;
+
+  // Color – State
+  --color-disabled-bg:     #F3F4F6;
+  --color-disabled-text:   #9CA3AF;
+  --color-disabled-border: #E5E7EB;
+  --color-readonly-bg:     #F9FAFB;
+  --color-readonly-text:   #4B5563;
+  --color-readonly-border: #D1D5DB;
+
+  // Typography – Font Size
+  --font-size-h1:       4.8rem;
+  --font-size-h2:       4rem;
+  --font-size-h3:       3.2rem;
+  --font-size-h4:       2.8rem;
+  --font-size-h5:       2.4rem;
+  --font-size-h6:       2rem;
+  --font-size-body1:    1.8rem;
+  --font-size-body2:    1.6rem;
+  --font-size-body3:    1.5rem;
+  --font-size-body4:    1.4rem;
+  --font-size-body5:    1.3rem;
+  --font-size-caption1: 1.2rem;
+  --font-size-caption2: 1.1rem;
+  --font-size-caption3: 1rem;
+
+  // Typography – Font Weight
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  // Typography – Line Height
+  --line-height-heading: 1.2;
+  --line-height-body:    1.6;
+  --line-height-caption: 1.4;
+
+  // Typography – Letter Spacing
+  --letter-spacing-tight:  -0.025em;
+  --letter-spacing-normal:  0em;
+  --letter-spacing-wide:    0.025em;
+
+  // Border Radius
+  --radius-xs:   0.2rem;
+  --radius-sm:   0.4rem;
+  --radius-md:   0.8rem;
+  --radius-lg:   1.2rem;
+  --radius-xl:   1.6rem;
+  --radius-2xl:  2.4rem;
+  --radius-full: 9999px;
+
+  // Spacing
+  --spacing-4:  0.4rem;
+  --spacing-8:  0.8rem;
+  --spacing-12: 1.2rem;
+  --spacing-16: 1.6rem;
+  --spacing-20: 2rem;
+  --spacing-24: 2.4rem;
+  --spacing-32: 3.2rem;
+  --spacing-40: 4rem;
+  --spacing-48: 4.8rem;
+  --spacing-64: 6.4rem;
+}

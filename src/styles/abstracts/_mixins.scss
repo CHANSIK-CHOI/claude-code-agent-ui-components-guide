@@ -1,0 +1,63 @@
+@use 'sass:map';
+@use 'sass:string';
+@use 'variables' as *;
+
+@mixin respond-to($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+  @if $value {
+    @media (min-width: $value) { @content; }
+  } @else {
+    @warn '`#{$breakpoint}`는 $breakpoints에 없습니다.';
+  }
+}
+
+@mixin typography($size, $weight: 'regular') {
+  font-size: var(--font-size-#{$size});
+  font-weight: var(--font-weight-#{$weight});
+
+  @if string.index($size, 'h') == 1 {
+    line-height: var(--line-height-heading);
+  } @else if string.index($size, 'caption') == 1 {
+    line-height: var(--line-height-caption);
+  } @else {
+    line-height: var(--line-height-body);
+  }
+}
+
+@mixin state-disabled {
+  background-color: var(--color-disabled-bg);
+  color:            var(--color-disabled-text);
+  border-color:     var(--color-disabled-border);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@mixin state-readonly {
+  background-color: var(--color-readonly-bg);
+  color:            var(--color-readonly-text);
+  border-color:     var(--color-readonly-border);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
